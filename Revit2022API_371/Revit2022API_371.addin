@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Assembly>"C:\PROG\App\DLL\Revit2022API_371.dll"</Assembly>
+		<AddInId>827B7A56-57D5-47BD-9F03-E5231947762B</AddInId>
+		<FullClassName>Revit2022API_371.Main</FullClassName>
+		<VendorId>ADSK</VendorId>
+		<Text>Тема 7 Создание листов </Text>
+	</AddIn>
+</RevitAddIns>
+
