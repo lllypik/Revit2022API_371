@@ -5,8 +5,47 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Revit2022API_371"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             SizeToContent="WidthAndHeight"
+             MinWidth="350"
+             Title="Создание листов">
     <StackPanel>
+        
+        <Label Content="Выберите тип формата листа"
+                   Margin="5"/>
 
-        </StackPanel>
+        <ComboBox ItemsSource="{Binding TitleBlocks}"
+                  SelectedValue="{Binding SelectedTitleBlock}"
+                  DisplayMemberPath="Name"
+                  Margin="5"
+                  Padding="5"/>
+
+        <Label Content="Введите количество листов"
+                   Margin="5"/>
+
+        <TextBox Text="{Binding ParameterNumberSheets}"
+                 Margin="5"
+                 Padding="5"/>
+
+        <Label Content="Выберите вид, вставляемый в каждый лист"
+                   Margin="5"/>
+
+        <ComboBox ItemsSource="{Binding Views}"
+                  SelectedValue="{Binding SelectedView}"
+                  DisplayMemberPath="Name"
+                  Margin="5"
+                  Padding="5"/>
+
+        <Label Content="Введите информацию для заполнения параметра Разработал"
+                   Margin="5"/>
+
+        <TextBox Text="{Binding ParameterTextDesignBy}"
+                 Margin="5"
+                 Padding="5"/>
+
+        <Button Content="Создать лист"
+                Command="{Binding CreateSheetCommand}"
+                Margin="5"
+                Padding="5"/>
+
+    </StackPanel>
 </Window>
